@@ -1,0 +1,57 @@
+{
+  "best_model": "LogisticRegression",
+  "features": [
+    "applicant_income",
+    "coapplicant_income",
+    "credit_score",
+    "employment_years",
+    "loan_amount",
+    "loan_term",
+    "dependents_num",
+    "education_graduate",
+    "self_employed_yes",
+    "married_yes",
+    "property_urban",
+    "property_semiurban",
+    "property_rural"
+  ],
+  "metrics": {
+    "LogisticRegression": {
+      "Accuracy": 0.7067,
+      "Precision": 0.715,
+      "Recall": 0.8874,
+      "F1": 0.792,
+      "ROC_AUC": 0.758
+    },
+    "RandomForest": {
+      "Accuracy": 0.7017,
+      "Precision": 0.7146,
+      "Recall": 0.8755,
+      "F1": 0.7869,
+      "ROC_AUC": 0.7457
+    },
+    "GradientBoosting": {
+      "Accuracy": 0.71,
+      "Precision": 0.7284,
+      "Recall": 0.8596,
+      "F1": 0.7886,
+      "ROC_AUC": 0.7482
+    }
+  },
+  "feature_importance": {
+    "credit_score": 0.7076,
+    "applicant_income": 0.2342,
+    "employment_years": 0.2057,
+    "loan_term": 0.1685,
+    "property_semiurban": 0.146,
+    "married_yes": 0.1319,
+    "coapplicant_income": 0.1268,
+    "education_graduate": 0.1257,
+    "loan_amount": 0.1147,
+    "self_employed_yes": 0.1054,
+    "property_rural": 0.0872,
+    "dependents_num": 0.0846,
+    "property_urban": 0.072
+  },
+  "approval_rate_in_training_data": 0.6288
+}

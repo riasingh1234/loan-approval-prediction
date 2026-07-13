@@ -1,0 +1,108 @@
+:root {
+  /* ---- Color: "ledger at night" — charcoal-navy base with a restrained
+     gold vignette (trust, value) and an emerald signal color for approval
+     decisions. Risk bands map to emerald / amber / red. ---- */
+  --bg-deep: #0a0b0f;
+  --bg-mid: #0e121a;
+  --bg-warm: #14110a;
+  --glass-fill: rgba(255, 255, 255, 0.05);
+  --glass-fill-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --glass-border-hover: rgba(52, 211, 153, 0.35);
+
+  --signal-emerald: #34d399;
+  --signal-emerald-dim: rgba(52, 211, 153, 0.15);
+  --signal-gold: #f2c14e;
+  --ink-primary: #f1f0ec;
+  --ink-secondary: #a9a9b3;
+  --ink-tertiary: #6d6d78;
+
+  --risk-low: #34d399;
+  --risk-medium: #f2c14e;
+  --risk-high: #ef4444;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink-primary);
+  background: radial-gradient(ellipse 110% 75% at 12% -8%, #1c1608 0%, transparent 52%),
+    radial-gradient(ellipse 95% 70% at 100% 100%, #0c1f19 0%, transparent 50%),
+    linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-mid) 55%, #0a0e0c 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--signal-emerald-dim);
+  color: var(--signal-emerald);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+.glass {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--shadow-glass);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

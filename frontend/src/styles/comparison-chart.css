@@ -1,0 +1,22 @@
+@import "./shared-cards.css";
+
+.comparison-card {
+  padding: 20px 22px;
+}
+
+.comparison-hint {
+  font-size: 0.7rem;
+  color: var(--ink-tertiary);
+}
+
+.comparison-tooltip {
+  background: rgba(14, 18, 26, 0.92);
+  border: 1px solid var(--glass-border-hover);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.comparison-tooltip p {
+  margin: 2px 0;
+  font-size: 0.75rem;
+}

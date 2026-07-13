@@ -1,0 +1,30 @@
+.financial-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.financial-card {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.financial-label {
+  font-size: 0.7rem;
+  color: var(--ink-tertiary);
+  margin: 0 0 3px;
+}
+
+.financial-value {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .financial-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,55 @@
+@import "./shared-cards.css";
+
+.factors-card {
+  padding: 20px 22px;
+}
+
+.factors-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin: 0 0 14px;
+}
+
+.factors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.factor-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.factor-dot {
+  margin-top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.factor-name {
+  margin: 0 0 3px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.factor-impact {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.factor-note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}

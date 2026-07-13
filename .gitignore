@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# Model artifacts are kept tracked so the backend runs out of the box.
+# Regenerate via data/generate_data.py + notebooks/train_model.py if needed.
